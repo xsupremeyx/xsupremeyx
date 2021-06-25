@@ -1,9 +1,8 @@
-'''Make a Program in which a number will be specified and the
- user will guess the number through inputs, if the input is less or greater than
-the number then tell the user so, so that they can correct themselves
-there are 9 tries in total, and with every failed guess, print no. of
-guesses left, if it becomes 0 print game over
-number= 18'''
+print("This is a number guess game", end ='. ')
+print("Try to guess the jackpot number")
+print("IF your guess was MORE than the jackpot, then the jackpot will be LESS than that guess")
+print("IF your guess was LESS than the jackpot, then the jackpot will be MORE than that guess")
+print("To Play the game, Follow the instructions Carefully, Do NOT ENTER ANYTHING ELSE THAN WHOLE NUMBERS, Even Spaces\n")
 import random
 jackpot=random.randint(0,100)
 attempts=int(0)
@@ -23,7 +22,7 @@ while (True):
             print("Congratulations!\n You Guessed the Jackpot in",attempts,"attempt(s)!\n")
             print("Press Y To Play Again or N To Exit")
             game=str(input("\n"))
-            game.upper()
+            game=game.upper()
             if game=="Y":
                 print("Restarting Game\n")
                 continue
@@ -31,14 +30,13 @@ while (True):
                 print("Terminated")
                 break
         elif guess<jackpot:
-            print("The Number is Less than the Jackpot.\n Try Again!")
+            print("Your Number is Less than the Jackpot.\n Try Again!")
             print("You have",tries,"Attempts left\n")
             continue
         elif guess>jackpot:
-            print("The Number is More than the Jackpot.\n Try Again")
+            print("Your Number is More than the Jackpot.\n Try Again")
             print("You have", tries, "Attempts left\n")
             continue
         else:
             print("Unexpected Error,\n Play Again")
-
 
